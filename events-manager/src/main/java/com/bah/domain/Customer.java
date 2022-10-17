@@ -2,11 +2,12 @@ package com.bah.domain;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@EntityScan
+@Entity
 public class Customer {
 
     @Id
