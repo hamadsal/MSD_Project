@@ -4,11 +4,12 @@ import com.bah.domain.Customer;
 import com.bah.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class CustomerService {
-    @Autowired
-    private CustomerRepository repo;
+import javax.swing.text.html.Option;
+import java.util.Optional;
 
-    public Iterable<Customer> findAllCustomers() {
-        return repo.findAll();
-    }
+public interface CustomerService {
+
+    Iterable<Customer> findAll();
+
+    Optional<Customer> findByName(String name);
 }
